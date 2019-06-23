@@ -1,2 +1,2 @@
 # foreigntradingsystem
-Foreign trading system for Case Tools Lab
+Web application for Foreign Trading system built using HTML,CSS,PHP 

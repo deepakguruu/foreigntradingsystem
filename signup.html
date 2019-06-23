@@ -1,89 +1,14 @@
 
 <html>
 <head>
-    <title>Table Align Demo</title>
-
-    <script type="text/javascript">
-
-    function ValidateForm()
-    {
-        var nameB = document.getElementById ("name");
-
-        if (nameBox.value.length == 0)
-        {
-            alert ("Enter name.");
-            return false;
-        }
-        var re = /^\w+(?:\s\w+){0,3}$/;
-
-        if (!nameBox.value.match (re))
-        {
-            alert ("Invalid name.");
-            return false;
-        }
-
-        var pwBox = document.getElementById ("password");
-
-        if (pwBox.value.length < 6)
-        {
-            alert ("Password is too short.");
-            return false;
-        }
-
-        if (pwBox.value.length > 16)
-        {
-            alert ("Password is too long.");
-            return false;
-        }
-
-        re = /^\S{6,16}$/;
-
-        if (!pwBox.value.match (re))
-        {
-            alert ("Invalid password.");
-            return false;
-        }
-        re = /^\d{7,16}$/;
-
-        var telBox = document.getElementById ("telephone");
-
-        if (telBox.value.length > 0)
-        {
-            if (!telBox.value.match (re))
-            {
-                alert ("Invalid telephone number.");
-                return false;
-            }
-        }
-
-        re = /^\w+([\.\-\+]\w+)*@\w+(\-\w+)*\.\w+(\-\w+)*(\.\w+(\-\w+)*)*$/;
-
-        var emailBox = document.getElementById ("email");
-
-        if (!emailBox.value.match (re))
-        {
-            alert ("Invalid email address: " + emailBox.value);
-            return false;
-        }
-
-        var maleBox = document.getElementById ("male");
-        var femaleBox = document.getElementById ("female");
-
-        if(!maleBox.checked && !femaleBox.checked)
-        {
-            alert ("Specify gender");
-            return false;
-        }
-	alert("Successfull");
-        return true;
-    }
-
-    </script>
+    <title>Signup</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body background="queen.jpg">
-      <form method="get" action="main.htm">
+  <h1 class="inp" style="text-align: center">Sign Up</h1>
+
+      <form method="post" action="signup_add.php">
     <center>
     <table class="inp" style="width: 400px;">
         <tr>
@@ -92,16 +17,8 @@
      NAME:
             </td>
             <td style="width: 65%;">
-                <input id="name" type="text" name="NAME" maxlength="52" />
+                <input id="name" type="text" name="name" maxlength="52" />
 
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 35%;">
-                  PASSWORD:
-            </td>
-            <td style="width: 65%;">
-                <input id="password" type="PASSWORD" name="PASSWORD" maxlength="16" />
             </td>
         </tr>
         <tr>
@@ -109,7 +26,15 @@
         EMAIL:
             </td>
             <td style="width: 65%;">
-                <input id="email" type="text" name="EMAIL" maxlength="2048" />
+                <input id="email" type="text" name="email" maxlength="2048" />
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 35%;">
+                  PASSWORD:
+            </td>
+            <td style="width: 65%;">
+                <input id="password" type="PASSWORD" name="password" maxlength="16" />
             </td>
         </tr>
         <tr>
@@ -117,7 +42,7 @@
       PHONE NO:
             </td>
             <td style="width: 65%;">
-                <input id="phone no" type="text" name="PHONE NO" maxlength="16" />
+                <input id="phone_no" type="text" name="phone_no" maxlength="16" />
             </td>
         </tr>
         <tr>
@@ -125,19 +50,19 @@
           GENDER:
             </td>
             <td style="width: 65%;">
-                <input id="male" type="radio" value="Male" name="gender" checked/>Male
-                <input id="female" type="radio" value="Female" name="gender" />Female
+                <input id="gender" type="radio" value="Male" name="gender" checked/>Male
+                <input id="gender" type="radio" value="Female" name="gender" />Female
             </td>
         </tr>
 	<tr>
 	    <td style = "width:35%;">
  	          CURRENCY:
 	    </td>
-	    <td style = "width:35%;"><input type="radio" id="group3" name="group3" value="INR" checked>INR<input type="radio" id="group3" name="group3" value="usd">USD</td>
+	    <td style = "width:35%;"><input type="radio" id="group3" name="group3" value="INR" checked>INR<input type="radio" id="group3" name="group3" value="USD">USD</td>
 	</tr>
         <tr>
             <td colspan="2" style="width: 100%;">
-                <input type="submit" value="Submit" onclick="king.html" />
+              <button type="submit"  name="submit">Submit</button>
             </td>
         </tr>
     </table>

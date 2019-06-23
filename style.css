@@ -7,3 +7,12 @@
      color: white;
      font-weight: bold;
 }
+.button_main{
+  display: block;width: 115px;height: 25px;background-color: transparent;background-repeat:no-repeat;padding: 10px;text-align: center;text-decoration: none;
+     border-radius: 5px;
+     color: black;
+     font-weight: bold;
+}
+.inps{
+  font: verdana;color: Black;
+}
